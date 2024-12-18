@@ -190,7 +190,7 @@ with col1:
     # Verificar si el estado ya está actualizado y mostrar el contenido correspondiente
     if st.session_state["current_view"] == "content":
         st.markdown("### Generar Contenido")
-        model_choice = st.selectbox("Selecciona el modelo", ["mistralai/Mistral-7B-Instruct-v0.3", "EleutherAI/pythia-1.4b"])
+        model_choice = st.selectbox("Selecciona el modelo", ["mistralai/Mistral-7B-Instruct-v0.3", "tiiuae/falcon-7b-instruct"])
         topic = st.text_input("Tema del contenido")
         audience = st.text_input("Audiencia objetivo")
         platform = st.selectbox("Plataforma", ["LinkedIn", "Twitter", "Blog", "Instagram"])
@@ -212,27 +212,7 @@ with col1:
                 else:
                     st.warning("No se pudo generar contenido.")
 
-        if st.button("Generar Contenido Divulgativo"):
-            if scientific_area:
-                with st.spinner("Buscando artículos y generando contenido..."):
-                    # Llamada a la función de generación de contenido
-                    result = generate_scientific_content_with_context(scientific_area, personalization_info, language)
-                    
-                    if result:
-                        st.success(f"Contenido científico generado en {language}:")
-                        st.write(result)
-                        
-                        # Mostrar los artículos originales de arXiv
-                        st.markdown("#### Artículos de investigación consultados:")
-                        articles = fetch_arxiv_articles(scientific_area, max_results=3)
-                        for article in articles:
-                            st.markdown(f"**{article['title']}**")
-                            st.write(article['summary'])
-                            st.write(f"[Enlace al artículo original]({article['link']})")
-                    else:
-                        st.warning("No se pudo generar el contenido científico.")
-            else:
-                st.warning("Por favor, ingrese un área científica de interés.")
+        
 
         
 
