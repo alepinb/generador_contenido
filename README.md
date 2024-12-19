@@ -2,6 +2,11 @@
 
 Brilliant Generator es una aplicación interactiva desarrollada con Streamlit que combina generación de contenido, consulta de noticias financieras, datos bursátiles y creación de contenido científico divulgativo. Todo en una sola plataforma, fácil de usar y altamente funcional. 🚀
 
+## Interfaz:
+
+![brilliant_generator](https://github.com/user-attachments/assets/49581ab9-3189-4036-852c-d984933647fe)
+
+
 ## Características Principales 📌
 
 ### 1. Generación de Contenido
