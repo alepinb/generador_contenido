@@ -82,7 +82,7 @@ HF_TOKEN=tu_huggingface_token
 Inicie la aplicación con el siguiente comando:
 
 ```bash
-streamlit run app.py
+streamlit run app21.py
 ```
 
 ## Uso de la Aplicación 💻
@@ -100,7 +100,7 @@ streamlit run app.py
 
 ```
 brilliant-generator/
-├── app.py             # Código principal de la aplicación
+├── app21.py             # Código principal de la aplicación
 ├── requirements.txt   # Dependencias del proyecto
 ├── .env.example       # Ejemplo de configuración de variables de entorno
 └── README.md          # Documentación
