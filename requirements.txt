@@ -1,10 +1,5 @@
+requests
 streamlit
-langchain
-transformers
-diffusers
-torch
-Pillow
-huggingface_hub
 python-dotenv
-
-
+huggingface_hub
+yfinance
